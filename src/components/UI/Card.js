@@ -1,10 +1,12 @@
 import React from "react";
 import "./Card.scss";
 
-const Card = () => {
+const Card = (props) => {
   return (
     <div className="global-card">
-      <div className="img-container">image goes here</div>
+      <div className="img-container">
+        <img src={props.image} alt="" />
+      </div>
       <div className="text-container">
         <div className="text-left">
           <p className="fw-400">Desert king</p>

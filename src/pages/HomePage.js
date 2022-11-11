@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../components/UI/Card";
+import { inspiration } from "../data/cardData";
 import "./HomePage.scss";
 
 const HomePage = () => {
@@ -37,7 +38,11 @@ const HomePage = () => {
       </div>
       <section className="homepage-cards-section container">
         <h2 className="fw-700 fs-48">Inspiration for your next adventure</h2>
-        <Card />
+        <div className="homepage-cards-section-inner">
+          {inspiration.map((item) => (
+            <Card image={item.image} />
+          ))}
+        </div>
       </section>
       <section className="homepage-nft-section">
         <div className="nft-section-inner container">

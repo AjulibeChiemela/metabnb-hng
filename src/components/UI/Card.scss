@@ -5,10 +5,15 @@
   border: 1px solid #d7d7d7;
   border-radius: 15px;
   padding: 1rem;
+  &:hover {
+    border: 1px solid $primary;
+  }
   .img-container {
-    height: 265px;
-    background-color: bisque;
     margin-bottom: 1rem;
+    img {
+      width: 100%;
+      height: 265px;
+    }
   }
   .text-container {
     display: flex;
