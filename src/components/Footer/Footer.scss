@@ -14,6 +14,30 @@ footer {
         grid-template-columns: 1.3fr 3fr;
       }
     }
+    .comp-info {
+      display: grid;
+      gap: 3.5rem;
+
+      .socials {
+        display: grid;
+        gap: 2rem;
+        justify-content: center;
+        .icons {
+          display: grid;
+          width: 60%;
+          margin-inline: auto;
+          gap: 1rem;
+          align-items: center;
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+        @media screen and (min-width: $mobile) {
+          justify-content: left;
+          .icons {
+            margin-inline: 0;
+          }
+        }
+      }
+    }
     .lists {
       width: fit-content;
       margin-inline: auto;

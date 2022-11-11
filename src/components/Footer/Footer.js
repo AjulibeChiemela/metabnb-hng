@@ -6,10 +6,10 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer-inner container">
-        <div>
+        <div className="comp-info">
           <img src="/images/logo-white.svg" alt="" />
-          <div>
-            <div>
+          <div className="socials">
+            <div className="icons">
               <img src="/images/facebook.svg" alt="" />
               <img src="/images/instagram.svg" alt="" />
               <img src="/images/twitter.svg" alt="" />
