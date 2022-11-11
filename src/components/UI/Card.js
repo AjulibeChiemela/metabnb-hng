@@ -11,6 +11,7 @@ const Card = (props) => {
         <div className="text-left">
           <p className="fw-400">Desert king</p>
           <p className="fw-400">2345km away</p>
+          <img src="/images/stars.png" alt="" />
         </div>
         <div className="text-right">
           <p className="fw-700">1MBT per night</p>
