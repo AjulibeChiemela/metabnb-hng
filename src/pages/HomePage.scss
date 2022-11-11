@@ -52,6 +52,14 @@
       justify-content: space-around;
     }
   }
+  &-cards-section {
+    padding-block: 3.6rem;
+    h2 {
+      @media screen and (min-width: $md) {
+        text-align: center;
+      }
+    }
+  }
   &-nft-section {
     background-color: $primary;
     color: #fff;

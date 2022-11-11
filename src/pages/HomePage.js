@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "../components/UI/Card";
 import "./HomePage.scss";
 
 const HomePage = () => {
@@ -6,12 +7,12 @@ const HomePage = () => {
     <div className="homepage">
       <section className="homepage-hero container">
         <div className="homepage-hero-text">
-          <h1 className="fs-56 fw-700">
+          <h1 className="fs-56 fw-700 text-dark">
             Rent a <span className="text-primary">Place</span> away from{" "}
             <span className="text-primary">Home</span> in the{" "}
             <span className="text-primary">Metaverse</span>
           </h1>
-          <p className="fw-400 fs-24 hero-desc">
+          <p className="fw-400 fs-24 hero-desc text-dark">
             we provide you access to luxury and affordable houses in the
             metaverse, get a chance to turn your imagination to reality at your
             comfort zone
@@ -34,7 +35,10 @@ const HomePage = () => {
         <img src="/images/metamask.svg" alt="" />
         <img src="/images/opensea.svg" alt="" />
       </div>
-      <section className="cards-section"></section>
+      <section className="homepage-cards-section container">
+        <h2 className="fw-700 fs-48">Inspiration for your next adventure</h2>
+        <Card />
+      </section>
       <section className="homepage-nft-section">
         <div className="nft-section-inner container">
           <div className="nft-section-inner-text ">
