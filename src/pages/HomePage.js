@@ -34,6 +34,25 @@ const HomePage = () => {
         <img src="/images/metamask.svg" alt="" />
         <img src="/images/opensea.svg" alt="" />
       </div>
+      <section className="cards-section"></section>
+      <section className="homepage-nft-section">
+        <div className="nft-section-inner container">
+          <div className="nft-section-inner-text ">
+            <h2 className="fw-700 fs-48">Metabnb NFTs</h2>
+            <p className="fw-400 fs-18 nft-desc">
+              Discover our NFT gift cards collection. Loyal customers gets
+              amazing gift cards which are traded as NFTs. These NFTs gives our
+              cutomer access to loads of our exclusive services.
+            </p>
+            <button className="btn btn-light text-primary fw-400 fs-16">
+              Learn more
+            </button>
+          </div>
+          <div className="nft-section-inner-img">
+            <img src="/images/nft-imgs.png" alt="" />
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

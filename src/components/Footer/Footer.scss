@@ -1,0 +1,48 @@
+@import "../../styles/variables";
+
+footer {
+  background-color: #1d1d1e;
+  color: #fff;
+  padding-block: 3.9rem 2.3rem;
+  .footer-inner {
+    display: grid;
+    gap: 3rem;
+    justify-content: center;
+    @media screen and (min-width: $mobile) {
+      justify-content: initial;
+      @media screen and (min-width: $md) {
+        grid-template-columns: 1.3fr 3fr;
+      }
+    }
+    .lists {
+      width: fit-content;
+      margin-inline: auto;
+      text-align: center;
+      display: grid;
+      @media screen and (min-width: $mobile) {
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+        width: auto;
+        margin-inline: 0;
+      }
+      .list-heading {
+        font-weight: 700;
+        font-size: 1.125rem;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+          a {
+            font-weight: 300;
+            font-size: 0.875rem;
+            line-height: 30px;
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -52,4 +52,28 @@
       justify-content: space-around;
     }
   }
+  &-nft-section {
+    background-color: $primary;
+    color: #fff;
+    padding-block: 6.25rem;
+    .nft-section-inner {
+      display: grid;
+      gap: 5rem;
+      @media screen and (min-width: $md) {
+        grid-template-columns: 1fr 1.5fr;
+      }
+      &-text {
+        .nft-desc {
+          padding-block: 2.2rem 3.5rem;
+        }
+      }
+      &-img {
+        img {
+          width: 100%;
+          max-width: 600px;
+          height: auto;
+        }
+      }
+    }
+  }
 }
