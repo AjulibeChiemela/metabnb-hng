@@ -1,0 +1,55 @@
+@import "../styles/variables";
+
+.homepage {
+  &-hero {
+    padding-block: 7.81rem 4.19rem;
+    display: grid;
+    gap: 6.5rem;
+    @media screen and (min-width: $md) {
+      grid-template-columns: 1.5fr 1fr;
+    }
+    &-text {
+      .hero-desc {
+        padding-block: 3rem;
+        // @media screen and (min-width: $md) {
+        //   padding-block: 1rem;
+        // }
+      }
+      form {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        input {
+          border-radius: 8px 0px 0px 8px;
+          border-color: #a3a3a3;
+          padding-block: 0.8rem;
+          &::placeholder {
+            font-weight: 500;
+            font-size: 0.875rem;
+            color: #b8b8b8;
+          }
+        }
+        .btn {
+          border-radius: 0px 8px 8px 0px;
+          padding-block: 0.18rem;
+        }
+      }
+    }
+    &-img {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .logo-footer {
+    background-color: $primary;
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+    padding-block: 1rem;
+    @media screen and (min-width: $md) {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}

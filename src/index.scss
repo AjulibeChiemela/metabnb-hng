@@ -1,0 +1,20 @@
+@import "./styles/variables";
+@import "bootstrap/scss/bootstrap.scss";
+@import url("https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;500;600;700&display=swap");
+
+html {
+  font-size: 14px;
+  @media screen and (min-width: $md) {
+    font-size: 16px;
+  }
+}
+
+body {
+  font-family: "Red Rose", cursive;
+}
+
+.form-control {
+  &:focus {
+    box-shadow: none;
+  }
+}
