@@ -5,8 +5,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  .header-logo {
-  }
   .bar {
     padding-bottom: 0.3rem;
     @media screen and (min-width: $md) {
@@ -66,8 +64,6 @@ header {
           }
         }
       }
-    }
-    .header-btn {
     }
   }
 }
