@@ -1,0 +1,73 @@
+@import "../../styles/variables";
+
+header {
+  margin-top: 3.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  .header-logo {
+  }
+  .bar {
+    padding-bottom: 0.3rem;
+    @media screen and (min-width: $md) {
+      display: none;
+    }
+  }
+  .header-menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(210, 206, 206);
+    @media screen and (min-width: $md) {
+      position: static;
+      width: auto;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 0;
+      gap: 4rem;
+    }
+    &.open {
+      display: grid;
+      gap: 2rem;
+      @media screen and (min-width: $md) {
+        display: flex;
+      }
+    }
+    @media screen and (max-width: 991px) {
+      &.closed {
+        display: none;
+      }
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      @media screen and (min-width: $md) {
+        display: flex;
+        gap: 1rem;
+      }
+
+      li {
+        a {
+          text-decoration: none;
+          color: $dark;
+          font-weight: 400;
+          font-size: 1.25rem;
+          &:hover {
+            color: $primary;
+          }
+          &.active {
+            border-bottom: 1px solid $primary;
+          }
+        }
+      }
+    }
+    .header-btn {
+    }
+  }
+}
