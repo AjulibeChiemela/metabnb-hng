@@ -1,11 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Card.scss";
 
 const Card = (props) => {
+  const [showColHeart, setShowColHeart] = useState(false);
+
+  const toggleHeart = () => {
+    setShowColHeart((prevShowColHeart) => !prevShowColHeart);
+  };
+
   return (
     <div className="global-card">
       <div className="img-container">
-        <img src={props.image} alt="" />
+        <img src={props.image} alt="" className="place-img" />
+        {!showColHeart && (
+          <img
+            src="/images/heart-grey.svg"
+            alt=""
+            className="heart"
+            onClick={toggleHeart}
+          />
+        )}
+        {showColHeart && (
+          <img
+            src="/images/heart-col.svg"
+            alt=""
+            className="heart"
+            onClick={toggleHeart}
+          />
+        )}
       </div>
       <div className="text-container">
         <div className="text-left">

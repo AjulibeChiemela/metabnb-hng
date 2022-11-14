@@ -4,6 +4,7 @@ import "./styles/helpers.scss";
 import { Routes, Route } from "react-router-dom";
 import FrontLayout from "./layout/FrontLayout";
 import HomePage from "./pages/HomePage";
+import PlaceToStay from "./pages/PlaceToStay";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<FrontLayout />}>
           <Route index element={<HomePage />} />
+          <Route path="places" element={<PlaceToStay />} />
         </Route>
       </Routes>
     </div>

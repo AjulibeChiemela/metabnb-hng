@@ -43,6 +43,7 @@ footer {
       margin-inline: auto;
       text-align: center;
       display: grid;
+      gap: 2rem;
       @media screen and (min-width: $mobile) {
         grid-template-columns: repeat(3, 1fr);
         text-align: left;
