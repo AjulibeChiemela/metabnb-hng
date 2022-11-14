@@ -41,13 +41,24 @@ header {
         display: none;
       }
     }
+    .close-arr {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      @media screen and (min-width: $md) {
+        display: none;
+      }
+    }
     ul {
       list-style-type: none;
-      margin: 0;
+      margin: 2rem 0 0;
       padding: 0;
+      display: grid;
+      gap: 1rem;
       @media screen and (min-width: $md) {
         display: flex;
         gap: 1rem;
+        margin: 0;
       }
 
       li {

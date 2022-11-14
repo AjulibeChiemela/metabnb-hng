@@ -6,6 +6,10 @@ import "./Header.scss";
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
 
+  const closeMenu = () => {
+    setShowMenu(false);
+  };
+
   return (
     <header className="container">
       <div className="header-logo">
@@ -18,16 +22,23 @@ const Header = () => {
         onClick={() => setShowMenu((prevShowMenu) => !prevShowMenu)}
       />
       <div className={`header-menu ${showMenu ? "open" : "closed"}`}>
+        <img
+          src="/images/close.png"
+          alt=""
+          className="close-arr"
+          onClick={closeMenu}
+        />
         <ul>
           <li>
             <NavLink
               to="/"
               className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={closeMenu}
             >
               Home
             </NavLink>
           </li>
-          <li>
+          <li onClick={closeMenu}>
             <NavLink
               to="/places"
               className={({ isActive }) => (isActive ? "active" : "")}
@@ -35,10 +46,10 @@ const Header = () => {
               Place to stay
             </NavLink>
           </li>
-          <li>
+          <li onClick={closeMenu}>
             <Link to="/">NFTs</Link>
           </li>
-          <li>
+          <li onClick={closeMenu}>
             <Link to="/">Community</Link>
           </li>
         </ul>
