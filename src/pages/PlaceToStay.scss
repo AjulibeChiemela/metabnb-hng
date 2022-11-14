@@ -1,0 +1,21 @@
+@import "../styles/variables";
+
+.places-page {
+  &-cards {
+    padding-block: 3.6rem;
+    &-inner {
+      display: grid;
+      gap: 1.5rem;
+      margin-top: 2.2rem;
+      @media screen and (min-width: $mobile) {
+        grid-template-columns: 1fr 1fr;
+        @media screen and (min-width: $md) {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+        @media screen and (min-width: 1400px) {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+    }
+  }
+}
