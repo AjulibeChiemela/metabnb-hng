@@ -29,6 +29,7 @@
           padding: 1rem;
           li {
             padding: 0.5rem;
+            color: $dark;
             &:hover {
               color: $primary;
               cursor: pointer;
@@ -44,6 +45,7 @@
           justify-content: space-around;
         }
         li {
+          color: $dark;
           &:hover {
             color: $primary;
             cursor: pointer;
