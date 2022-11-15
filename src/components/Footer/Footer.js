@@ -39,16 +39,16 @@ const Footer = () => {
             <p className="list-heading">Places</p>
             <ul>
               <li>
-                <Link to="/">Castle</Link>
+                <Link to="/places">Castle</Link>
               </li>
               <li>
-                <Link to="/">Farms</Link>
+                <Link to="/places">Farms</Link>
               </li>
               <li>
-                <Link to="/">Beach</Link>
+                <Link to="/places">Beach</Link>
               </li>
               <li>
-                <Link to="/">Learn more</Link>
+                <Link to="/places">Learn more</Link>
               </li>
             </ul>
           </div>
