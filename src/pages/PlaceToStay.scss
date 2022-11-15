@@ -1,6 +1,53 @@
 @import "../styles/variables";
 
 .places-page {
+  &-filter {
+    margin-top: 4rem;
+    &-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media screen and (min-width: $md) {
+        display: grid;
+        grid-template-columns: 9.2fr 0.8fr;
+      }
+      .dropdown {
+        @media screen and (min-width: $md) {
+          display: none;
+        }
+      }
+      .lg-list {
+        display: none;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        @media screen and (min-width: $md) {
+          display: flex;
+          justify-content: space-around;
+        }
+        li {
+          &:hover {
+            color: $primary;
+            cursor: pointer;
+          }
+        }
+      }
+      .filter {
+        background: linear-gradient(124.4deg, #ffffff 10.8%, #ffffff 87.34%);
+        border: 1px solid #b4b4b4;
+        border-radius: 8px;
+        width: fit-content;
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        &:hover {
+          cursor: pointer;
+          background: #ddd;
+        }
+      }
+    }
+  }
   &-cards {
     padding-block: 3.6rem;
     &-inner {
