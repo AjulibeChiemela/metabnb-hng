@@ -1,32 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
+import ClickAwayListener from "react-click-away-listener";
 import Card from "../components/UI/Card";
 import { places } from "../data/cardData";
 import "./PlaceToStay.scss";
 
 const PlaceToStay = () => {
+  const [showList, setShowList] = useState(false);
+
+  const handleToggle = () => {
+    setShowList((prevShowList) => !prevShowList);
+  };
+
+  const handleHideList = () => {
+    setShowList(false);
+  };
+
   return (
     <div className="places-page container">
       <section className="places-page-filter container">
         <div className="places-page-filter-inner ">
-          <div className="dropdown">
+          <div className="locations">
             <button
-              class="btn btn-primary dropdown-toggle"
+              class="btn btn-primary "
               type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
+              onClick={handleToggle}
             >
               Select Location
             </button>
-            <ul className="dropdown-menu">
-              <li className="dropdown-item">Resturant</li>
-              <li className="dropdown-item">Cottage</li>
-              <li className="dropdown-item">Castle</li>
-              <li className="dropdown-item">fantast city</li>
-              <li className="dropdown-item">beach</li>
-              <li className="dropdown-item">Carbins</li>
-              <li className="dropdown-item">Off-grid</li>
-              <li className="dropdown-item">Farm</li>
-            </ul>
+            {showList && (
+              <ClickAwayListener onClickAway={handleHideList}>
+                <ul>
+                  <li onClick={handleHideList}>Resturant</li>
+                  <li onClick={handleHideList}>Cottage</li>
+                  <li onClick={handleHideList}>Castle</li>
+                  <li onClick={handleHideList}>fantast city</li>
+                  <li onClick={handleHideList}>beach</li>
+                  <li onClick={handleHideList}>Carbins</li>
+                  <li onClick={handleHideList}>Off-grid</li>
+                  <li onClick={handleHideList}>Farm</li>
+                </ul>
+              </ClickAwayListener>
+            )}
           </div>
           <ul className="lg-list">
             <li>Resturant</li>
